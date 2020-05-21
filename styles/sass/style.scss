@@ -7,6 +7,8 @@
 @import 'colors';
 @import 'typography';
 
+// GENERAL STYLING
+
 html {
     font-size: 62.5%;
 }
@@ -37,6 +39,21 @@ button {
     border-bottom: 4px solid $buttonAndUnderline;
 }
 
+header nav input {
+    opacity: 0;
+    position: absolute;
+}
+
+header nav label {
+    font-size: 4rem;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    visibility: hidden;
+    background-color: $boxShadow;
+    padding: 15px;
+}
+
 .header-nav {
     display: flex;
     justify-content: right;
@@ -57,6 +74,12 @@ button {
         }
 }
 
+.section-background {
+    background-color: $sectionBackground;
+}
+
+// HEADERS
+
 .home-header {
     background-image: url(../assets/header-image.jpg);
     background-position: left;
@@ -69,6 +92,7 @@ button {
         }
 }
 
+
 .blog-header {
     background-image: url(../assets/blog-header.jpg);
     background-position: center;
@@ -76,7 +100,7 @@ button {
     height: 80vh;
         h2 {
             text-align: center;
-            padding-top: 100px;
+            padding-top: 50px;
         }
 
 }
@@ -89,8 +113,10 @@ button {
     width: 45%;
 }
 
+// HOME SECTION 1
+
 .section-1 {
-    padding: 200px 100px 150px 100px;
+    padding: 20% 5% 10% 5%;
     text-align: center;
     background-color: $sectionBackground;
     display: flex;
@@ -102,49 +128,53 @@ button {
         }
 }
 
-//FIX BELOW
-// .section-2 {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr;
-//     grid-template-rows: 1fr 1fr;
-//     gap: 50px 100px;
-//         .left-image {
-//             box-shadow: 30px 30px 0px 0px $boxShadow;
-//             // width: 90%;
-//         }
-//         .right-image {
-//             box-shadow: -30px 30px 0px 0px $boxShadow;
-//         }
-// }
+// HOME SECTION 2
 
 .section-2 {
     display: flex;
     justify-content: space-between;
         .subsection {
-            flex: 1 1 auto;
             width: 50%;
+            padding-left: 40px;
+                h4 {
+                    margin-bottom: -5px;
+                }
         }
 }
+
+.section-2 img {
+    width: 35vw;
+    box-shadow: 30px 30px 0px 0px $boxShadow;
+}
+
+// HOME SECTION 3
 
 .section-3 {
     display: flex;
     margin-top: 100px;
+    justify-content: space-between;
+    margin-bottom: 20px;
         .subsection {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
             flex: 1 1 auto;
+                h4 {
+                    margin-bottom: -5px;
+                }
         }
         .right-image {
             order: 2;
+            padding-left: 100px;
+            
+                img {
+                    width: 35vw;
+                    box-shadow: -30px 30px 0px 0px $boxShadow;
+                };
         }
 }
 
-// FIX ABOVE
-
-.section-background {
-    background-color: $sectionBackground;
-}
+// HOME SECTION 4
 
 .section-4 {
     display: grid;
@@ -154,13 +184,26 @@ button {
     padding-top: 100px;
     padding-bottom: 100px;
     background-color: $sectionBackground;
+        h4 {
+            position: relative;
+        }
+        h4::before {
+            content: '';
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: $buttonAndUnderline;
+            position: absolute;
+            top: 0;
+            left: -60px;
+        }
 }
 
 .banner {
     width: 100%;
 }
 
-// SECTION 5
+// HOME SECTION 5
 
 .section-5 {
     display: flex;
@@ -174,6 +217,8 @@ button {
             margin-left: 100px;
         }
 }
+
+// HOME GALLERY
 
 .gallery {
     display: flex;
@@ -200,7 +245,7 @@ footer {
         }
 }
 
-// BLOG PAGE STYLING BELOW
+// BLOG PAGE STYLING
 
 .blog-main {
     display: flex;
@@ -243,15 +288,22 @@ aside {
 
 .aside-ul {
     list-style: none;
+        li {
+            position: relative;
+        }
 }
-// .aside-ul li::before {
-//     content: '';
-//     display: block;
-//     width: 5px;
-//     height: 5px;
-//     border-radius: 50%;
-//     background-color: red;
-// }
+
+.aside-ul li::before {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: $buttonAndUnderline;
+    position: absolute;
+    left: -20px;
+    top: 12px;
+}
 
 .comments {
     display: flex;
@@ -261,13 +313,28 @@ aside {
         }
 }
 
+.comment-1 {
+    margin-bottom: 100px;
+}
+
 .comment-date {
     display: block;
+    margin-bottom: 20px;
 }
 
 .comment-form {
     display: flex;
     flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: -100px;
+        div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        textarea {
+            margin-bottom: 40px;
+        }
 }
 
 input,
@@ -280,7 +347,7 @@ textarea {
 input {
     border: none;
     border-bottom: 2px solid $buttonAndUnderline;
-    width: 40%;
+    width: 45%;
 }
 
 textarea {
@@ -293,8 +360,163 @@ textarea {
     margin-top: -100px;
 }
 
-// 1. Fix the aside section of the blog
-// 2. Fix section-2 of the home page
-// 3. fix comment input
+@media (max-width: 980px) {
+    .home-header h1 {
+        font-size: 10rem;
+        padding-top: 300px;
+    }
+
+    header nav label {
+        visibility: visible;
+            &:hover,
+            &:focus {
+                color: $buttonAndUnderline;
+                cursor: pointer;
+            }
+    }
+
+    .header-nav {
+        visibility: hidden;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: rgba(255, 255, 255, .9);
+            li {
+                width: 100%;
+            }
+    }
+
+    header input[type=checkbox]:checked ~ .header-nav {
+        visibility: visible;
+    }
+
+    .section-2 {
+        display: block;
+        text-align: center;
+            .subsection {
+                width: 100%;
+                padding-left: 0px;
+                    h4 {
+                        margin-bottom: 0;
+                    }
+                    p {
+                        text-align: left;
+                    }
+            }
+    }
+    
+    .section-2 img {
+        width: 80vw;
+    }
+
+    .section-3 {
+        display: block;
+        text-align: center;
+            .subsection {
+                display: block;
+                width: 100%;
+                    h4 {
+                        margin-bottom: 0;
+                    }
+                    p {
+                        text-align: left;
+                    }
+            }
+            .right-image {
+                padding-left: 0;
+                    img {
+                        width: 80vw;
+                    }
+            }
+    }
+
+    .section-5 {
+        display: block;
+            .small-box {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            .subsection {
+                margin-left: 0;
+                text-align: center;
+                    p {
+                        text-align: left;
+                    }
+            }
+    }
+
+    .blog-main {
+        display: block;
+            section,
+            aside {
+                width: 100%;
+            }
+            section {
+                position: static;
+            }
+    }
+
+    .blog-picture img {
+        width: 80vw;
+        box-shadow: -30px 30px 0px 0px $boxShadow;
+    }
+
+    aside img {
+        display: none;
+    }
+
+    .comment-form {
+        padding-bottom: 40px;
+    }
+}
+
+@media(max-width: 720px) {
+
+    .home-header h1 {
+        font-size: 7rem;
+        padding-top: 350px;
+    }
+
+    .blog-header h2 {
+        padding-top: 150px;
+        margin-top: -100px;
+    }
+
+    .section-4 {
+        display: block;
+        text-align: center;
+            h4::before {
+                left: 0;
+            }
+            p {
+                text-align: left;
+            }
+    }
+
+    .gallery {
+        display: block;
+            div {
+                width: 100%;
+                margin-top: 5%;
+            }
+    }
+
+    .comments {
+        display: block;
+            p {
+                margin-left: 0;
+            }
+    }
+}
+
+@media(max-width: 440px) {
+    .home-header h1 {
+        font-size: 4rem;
+        padding-top: 400px;
+    }
+}
+
+
+// Fix Icons in index .section-4
 // 4. Write and style contact.html
 // 5. Make averything responsive
