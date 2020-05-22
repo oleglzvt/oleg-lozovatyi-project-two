@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="contact-header">
+        <div class="wrapper">
+            <nav>
+                <input type="checkbox" name="" id="burger">
+                <label for="burger"><i class="fas fa-bars"></i></label>
+                <ul class="header-nav">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a class="underline" href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <h2>Get in touch</h2>
+        </div>
+    </header>
+
+    <main class="contact">
+        <div class="wrapper">
+            <!-- Contact info with social media links -->
+            <div class="contact-main">
+                <aside>
+                    <ul class="social">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                    </ul>
+                    <h4>info@email.com</h4>
+                    <ul class="social contact-info">
+                        <li>123 - 456 - 7890</li>
+                        <li>123 Queen Street West, Unit 10</li>
+                        <li>Toronto, Ontario</li>
+                        <li>M5V2D5</li>
+                    </ul>
+                </aside>
+
+                <!-- Contact form -->
+
+                <form class="comment-form contact-form" action="POST">
+                    <div>
+                        <label class="sr-only" for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Name">
+    
+                        <label class="sr-only" for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email address">
+                    </div>
+    
+                    <label class="sr-only" for="comment">Comment</label>
+                    <textarea name="comment" id="comment" cols="30" rows="7" maxlength="200" placeholder="Message"></textarea>
+    
+                    <button>Sumbit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="contact-footer">
+        <p>Copyright &copy; 2018 HackerYou</p>
+    </footer>
+</body>
+</html>

@@ -105,6 +105,15 @@ header nav label {
 
 }
 
+.contact-header {
+    background-image: url(../assets/contact-header.jpg);
+    background-size: cover;
+    height: 70vh;
+        h2 {
+            text-align: center;
+        }
+}
+
 .header-box {
     position: absolute;
     right: 0;
@@ -269,6 +278,8 @@ footer {
     margin-left: -30px;
 }
 
+// BLOG ASIDE SECTION
+
 aside {
     width: 35%;
         div {
@@ -304,6 +315,8 @@ aside {
     left: -20px;
     top: 12px;
 }
+
+//BLOG COMMENTS SECTION
 
 .comments {
     display: flex;
@@ -360,7 +373,69 @@ textarea {
     margin-top: -100px;
 }
 
+// CONTACT PAGE STYLING
+
+.contact {
+    background-color: $sectionBackground;
+}
+
+.contact-main {
+    display: flex;
+    justify-content: space-between;
+        aside {
+            padding-top: 100px;
+        }
+}
+
+.contact-main form {
+    box-shadow: -30px 30px 0px 0px $boxShadow;
+    width: 70%;
+    position: relative;
+    padding: 40px;
+    bottom: 300px;
+    background-color: $footerText;
+        input,
+        textarea {
+            background-color: $footerText;
+        }
+}
+
+.social {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    width: 45%;
+        li {
+            margin: 0;
+            padding: 0;
+                a {
+                    text-decoration: none;
+                    color: $mainText;
+                    font-size: 3rem;
+                        &:hover,
+                        &:focus {
+                            color: $buttonAndUnderline;
+                        }
+                }
+        }
+}
+
+.contact-info {
+    display: block;
+    width: 100%;
+}
+
+.contact-footer p{
+    margin: 0;
+}
+
+// MEDIA QUERIES
+
 @media (max-width: 980px) {
+
+// 980px HOME MEDIA QUERIES
+
     .home-header h1 {
         font-size: 10rem;
         padding-top: 300px;
@@ -445,6 +520,8 @@ textarea {
             }
     }
 
+// 980px BLOG MEDIA QUERIES
+
     .blog-main {
         display: block;
             section,
@@ -461,16 +538,53 @@ textarea {
         box-shadow: -30px 30px 0px 0px $boxShadow;
     }
 
-    aside img {
-        display: none;
+    aside div img {
+        margin: 0;
+        width: 100%;
+        padding-top: 50px;
     }
 
     .comment-form {
         padding-bottom: 40px;
     }
+
+// 980px CONTACT MEDIA QUERIES
+    .contact {
+        padding-bottom: 40px;
+    }
+    .contact-main {
+        display: block;
+            aside {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+                    &:first-child {
+                        width: 100%;
+                        padding-top: 50px;
+                    }
+                    .social {
+                        width: 100%;
+                    }
+            }
+            form {
+                width: 100%;
+                position: static;
+                padding: 0;
+                margin: 0;
+                background-color: $sectionBackground;
+                box-shadow: none;
+                    input,
+                    textarea {
+                        background-color: $sectionBackground;
+                    }
+            }
+    }
 }
 
 @media(max-width: 720px) {
+
+//720px HOME MEDIA QUERIES
 
     .home-header h1 {
         font-size: 7rem;
@@ -501,6 +615,8 @@ textarea {
             }
     }
 
+//720px BLOG MEDIA QUERIES
+
     .comments {
         display: block;
             p {
@@ -514,9 +630,11 @@ textarea {
         font-size: 4rem;
         padding-top: 400px;
     }
+
+    h2 {
+        font-size: 4rem;
+    }
 }
 
 
 // Fix Icons in index .section-4
-// 4. Write and style contact.html
-// 5. Make averything responsive
