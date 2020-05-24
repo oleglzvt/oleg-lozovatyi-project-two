@@ -302,11 +302,23 @@ button {
 
 @media (max-width: 980px) {
   h1 {
-    font-size: 7rem;
+    font-size: 10rem;
+    background-color: rgba(255, 255, 255, 0.7);
   }
 }
 
 @media (max-width: 720px) {
+  h1 {
+    font-size: 7rem;
+  }
+  h1,
+  h2 {
+    line-height: 50px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  h2 {
+    font-size: 6rem;
+  }
   h3 {
     font-size: 3.2rem;
   }
@@ -319,6 +331,10 @@ button {
 }
 
 @media (max-width: 440px) {
+  h1,
+  h2 {
+    font-size: 4rem;
+  }
   form input,
   form textarea {
     font-size: 1.5rem;
@@ -408,7 +424,6 @@ header nav label {
 }
 
 .home-header h1 {
-  padding-top: 400px;
   position: relative;
   z-index: 2;
 }
@@ -422,7 +437,6 @@ header nav label {
 
 .blog-header h2 {
   text-align: center;
-  padding-top: 50px;
 }
 
 .contact-header {
@@ -442,6 +456,20 @@ header nav label {
   -webkit-box-shadow: 0px 40px 0px #FDFA69, -40px 40px 0px #FDFA69, -40px -40px 0px #FDFA69, 0px -40px 0px #FDFA69;
           box-shadow: 0px 40px 0px #FDFA69, -40px 40px 0px #FDFA69, -40px -40px 0px #FDFA69, 0px -40px 0px #FDFA69;
   width: 45%;
+}
+
+.header-content {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .section-1 {
@@ -822,10 +850,6 @@ textarea {
 }
 
 @media (max-width: 980px) {
-  .home-header h1 {
-    font-size: 10rem;
-    padding-top: 300px;
-  }
   header nav label {
     visibility: visible;
   }
@@ -854,6 +878,9 @@ textarea {
     display: block;
     text-align: center;
   }
+  .section-2 img {
+    width: 80vw;
+  }
   .section-2 .subsection {
     width: 100%;
     padding-left: 0px;
@@ -863,9 +890,6 @@ textarea {
   }
   .section-2 .subsection p {
     text-align: left;
-  }
-  .section-2 img {
-    width: 80vw;
   }
   .section-3 {
     display: block;
@@ -964,10 +988,6 @@ textarea {
 }
 
 @media (max-width: 720px) {
-  .home-header h1 {
-    font-size: 7rem;
-    padding-top: 350px;
-  }
   .blog-header h2 {
     padding-top: 150px;
     margin-top: -100px;
@@ -994,15 +1014,5 @@ textarea {
   }
   .comments p {
     margin-left: 0;
-  }
-}
-
-@media (max-width: 440px) {
-  .home-header h1 {
-    font-size: 4rem;
-    padding-top: 400px;
-  }
-  h2 {
-    font-size: 4rem;
   }
 }
