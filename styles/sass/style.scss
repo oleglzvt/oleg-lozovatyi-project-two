@@ -198,6 +198,7 @@ header nav label {
         }
         h4::before {
             content: '';
+            padding: 6px;
             width: 45px;
             height: 45px;
             border-radius: 50%;
@@ -205,6 +206,18 @@ header nav label {
             position: absolute;
             top: 0;
             left: -60px;
+        }
+        .top-picks::before {
+            content: url(../assets/camera-solid.svg);
+        }
+        .community::before {
+            content: url(../assets/users-solid.svg);
+        }
+        .blog::before {
+            content: url(../assets/file-solid.svg);
+        }
+        .get-in-touch::before {
+            content: url(../assets/phone-solid.svg);
         }
 }
 
